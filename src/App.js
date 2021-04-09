@@ -1,4 +1,4 @@
-import Post from "./components/Post";
+ import Post from "./components/Post";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import AddPost from "./components/AddPosts";
 import "./App.css";
