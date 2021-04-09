@@ -5,18 +5,6 @@ import { PostContext } from "../context/PostContext";
 
 const PostList = () => {
   const [posts, setPosts] = useContext(PostContext);
-  // useEffect(() => {
-  //   axios
-  //     .get("https://jsonplaceholder.typicode.com/posts  ")
-  //     .then(function (response) {
-  //       // handle success
-  //       setPosts(response.data);
-  //     })
-  //     .catch(function (error) {
-  //       // handle error
-  //       console.log(error);
-  //     });
-  // });
 
   return (
     <div>
@@ -27,6 +15,7 @@ const PostList = () => {
             id={post.id}
             userId={post.userId}
             body={post.body}
+            key={post.id}
           />
         );
       })}

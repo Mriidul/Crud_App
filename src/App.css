@@ -16,3 +16,6 @@ nav {
   align-items: center;
   list-style: none;
 }
+.button {
+  margin: 0px, 20px;
+}
