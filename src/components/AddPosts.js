@@ -17,23 +17,22 @@ const AddPost = () => {
     setUserId(e.target.value);
   }
   function submitData() {
-    alert("submitted");
-
-    axios({
-      method: "post",
-      url: "https://jsonplaceholder.typicode.com/posts",
-      data: {
-        title,
-        body,
-        userId,
-      },
-    })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // alert("submitted");
+    // axios({
+    //   method: "post",
+    //   url: "https://jsonplaceholder.typicode.com/posts",
+    //   data: {
+    //     title,
+    //     body,
+    //     userId,
+    //   },
+    // })
+    //   .then((response) => {
+    //     console.log(response);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
   }
   return (
     <div>
