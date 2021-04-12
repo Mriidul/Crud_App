@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 const AddPost = () => {
   const [title, setTitle] = useState("");
@@ -35,26 +37,42 @@ const AddPost = () => {
       });
   }
   return (
-    <div>
-      <input
+    <div className="createPostContainer">
+      <TextField
+        className="createFields"
+        id="outlined-basic"
+        variant="outlined"
         value={userId}
         type="text"
-        placeholder="Give UserId"
+        label="Give UserId"
         onChange={handleUserId}
       />
-      <input
+      <TextField
+        className="createFields"
+        id="outlined-basic"
+        variant="outlined"
         value={title}
         type="text"
-        placeholder="Give Title of Post"
+        label="Give Title of Post"
         onChange={handleTitle}
       />
-      <input
+      <TextField
+        className="createFields"
+        id="outlined-basic"
+        variant="outlined"
         value={body}
         type="text"
-        placeholder="Give body of the post"
+        label="Give body of the post"
         onChange={handleBody}
       />
-      <button onClick={submitData}>Submit</button>
+      <Button
+        className="createFields"
+        variant="contained"
+        color="primary"
+        onClick={submitData}
+      >
+        Submit
+      </Button>
     </div>
   );
 };

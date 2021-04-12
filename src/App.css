@@ -3,19 +3,36 @@
 }
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   min-width: 10vh;
-  background-color: grey;
+  background-color: #5f939a;
   color: white;
+}
+.postContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link-styles {
+  color: #1b2021;
+}
+.app-logo {
+  color: #1b2021;
 }
 .nav-Links {
   width: 30%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
 }
-.button {
-  margin: 0px, 20px;
+.createPostContainer {
+  flex: 1;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 40vh;
 }

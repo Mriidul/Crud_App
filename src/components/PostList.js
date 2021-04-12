@@ -5,9 +5,8 @@ import { PostContext } from "../context/PostContext";
 
 const PostList = () => {
   const [posts, setPosts] = useContext(PostContext);
-
   return (
-    <div>
+    <div className="postContainer">
       {posts.map((post) => {
         return (
           <Post

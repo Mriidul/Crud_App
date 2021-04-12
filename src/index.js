@@ -4,12 +4,18 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { PostProvider } from "./context/PostContext";
+import { LikedIdProvider } from "./context/LikedPagesContext";
+import { DislikedIdProvider } from "./context/DislikedPageContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <PostProvider>
-      <App />
-    </PostProvider>
+    <DislikedIdProvider>
+      <LikedIdProvider>
+        <PostProvider>
+          <App />
+        </PostProvider>
+      </LikedIdProvider>
+    </DislikedIdProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
