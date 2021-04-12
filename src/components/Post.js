@@ -90,7 +90,7 @@ const Post = ({ id, title, body }) => {
             },
           }}
         >
-          <Button style={{ margin: "0px 10px" }}>Update</Button>
+          <Button style={{ margin: "0px 10px" }}>Edit</Button>
         </Link>
         <Button
           style={{ margin: "0px 10px" }}

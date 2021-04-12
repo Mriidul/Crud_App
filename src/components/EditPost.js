@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 const EditPost = (props) => {
   const [title, setUpdatedTitle] = useState("");
@@ -35,32 +37,46 @@ const EditPost = (props) => {
   }
   return (
     <div>
-      <h1>Update</h1>
-      <input
-        type="text"
-        placeholder="Change User Id"
-        onChange={handleUserIdChange}
-        value={userId}
-      />
-      <input
-        type="text"
-        placeholder="Change Title Text"
-        onChange={handleTitleChange}
-        value={title}
-      />
-      <input
-        type="text"
-        placeholder="Change Body Text"
-        onChange={handleBodyChange}
-        value={body}
-      />
-      <button
-        onClick={() => {
-          handleClick(props.location.state);
-        }}
-      >
-        Set Edited Value
-      </button>
+      <h1>Edit</h1>
+      <div className="createPostContainer">
+        <TextField
+          type="text"
+          className="createFields"
+          id="outlined-basic"
+          variant="outlined"
+          label="Change UserId"
+          onChange={handleUserIdChange}
+          value={userId}
+        />
+        <TextField
+          type="text"
+          className="createFields"
+          id="outlined-basic"
+          variant="outlined"
+          label="Change Title Text"
+          onChange={handleTitleChange}
+          value={title}
+        />
+        <TextField
+          id="outlined-basic"
+          className="createFields"
+          variant="outlined"
+          type="text"
+          label="Change Body Text"
+          onChange={handleBodyChange}
+          value={body}
+        />
+        <Button
+          variant="contained"
+          color="primary"
+          className="createFields"
+          onClick={() => {
+            handleClick(props.location.state);
+          }}
+        >
+          Set Edited Value
+        </Button>
+      </div>
     </div>
   );
 };
